@@ -31,7 +31,8 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    event: (OnboardingEvent) -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -89,8 +90,9 @@ fun OnboardingScreen(
                     text = buttonState.value[1],
                     onClick = {
                         scope.launch {
-                            if (pageState.currentPage == 3) {
+                            if (pageState.currentPage == 2) {
                                 //To do navigate to home screen
+                                event(OnboardingEvent.SaveAppEntry)
                             } else {
                                 pageState.animateScrollToPage(page = pageState.currentPage + 1)
                             }

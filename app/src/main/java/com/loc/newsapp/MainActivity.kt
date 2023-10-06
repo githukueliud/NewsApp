@@ -14,7 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.loc.newsapp.presentation.onboarding.OnboardingScreen
+import com.loc.newsapp.presentation.onboarding.OnboardingViewModel
 import com.loc.newsapp.ui.theme.NewsAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -27,7 +29,10 @@ class MainActivity : ComponentActivity() {
         setContent {
             NewsAppTheme {
                 Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.primary)){
-                    OnboardingScreen()
+                    val viewModel: OnboardingViewModel = hiltViewModel()
+                    OnboardingScreen(
+                        event = viewModel::onEvent
+                    )
                 }
             }
         }
