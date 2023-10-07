@@ -1,7 +1,6 @@
 package com.loc.newsapp.presentation.onboarding.components
 
 
-import android.content.res.Configuration.UI_MODE_NIGHT_NO
 import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -20,8 +19,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import com.loc.newsapp.R
-import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding1
-import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding2
+import com.loc.newsapp.presentation.Dimens.MediumPadding1
+import com.loc.newsapp.presentation.Dimens.MediumPadding2
 import com.loc.newsapp.presentation.onboarding.Page
 import com.loc.newsapp.presentation.onboarding.pages
 import com.loc.newsapp.ui.theme.NewsAppTheme

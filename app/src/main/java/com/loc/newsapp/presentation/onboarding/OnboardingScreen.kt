@@ -22,8 +22,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import com.loc.newsapp.presentation.common.NewsButton
 import com.loc.newsapp.presentation.common.NewsTextButton
-import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding1
-import com.loc.newsapp.presentation.onboarding.Dimens.PageIndicatorWidth
+import com.loc.newsapp.presentation.Dimens.MediumPadding1
+import com.loc.newsapp.presentation.Dimens.PageIndicatorWidth
 import com.loc.newsapp.presentation.onboarding.components.OnboardingPage
 import com.loc.newsapp.presentation.onboarding.components.PageIndicator
 import kotlinx.coroutines.launch
