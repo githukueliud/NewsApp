@@ -34,7 +34,8 @@ import com.loc.newsapp.presentation.navgraph.Route
 @Composable
 fun HomeScreen(
     articles: LazyPagingItems<Article>,
-    navigate: (String) -> Unit
+    navigateToSearch: () -> Unit,
+    navigateToDetails: (Article) -> Unit
 ) {
     val titles by remember {
         derivedStateOf {
@@ -70,7 +71,7 @@ fun HomeScreen(
             onValueChange ={},
             onSearch = {},
             onClick = {
-                navigate(Route.SearchScreen.route)
+                navigateToSearch()
             }
         )
         Spacer(modifier = Modifier.height(MediumPadding1))
@@ -88,7 +89,7 @@ fun HomeScreen(
             modifier = Modifier.padding(MediumPadding1),
             articles = articles,
             onClick = {
-                navigate(Route.DetailsScreen.route)
+                navigateToDetails(it)
             }
         )
     }
