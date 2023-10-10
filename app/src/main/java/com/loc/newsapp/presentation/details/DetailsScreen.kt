@@ -22,7 +22,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.tooling.preview.Preview
-import coil.ImageLoader
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.loc.newsapp.R
@@ -66,7 +65,7 @@ fun DetailsScreen(
                                   }
                               }
             },
-            onBookmarkClick = { event(DetailsEvent.SaveArticleEvent) },
+            onBookmarkClick = { event(DetailsEvent.UpsertDeleteArticle(article = article)) },
             onBackClick = navigateUp
         )
 
