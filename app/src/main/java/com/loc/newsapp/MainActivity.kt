@@ -50,7 +50,8 @@ class MainActivity : ComponentActivity() {
                     )
                 }
 
-                Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.primary)){
+                Box(modifier = Modifier
+                    .background(color = MaterialTheme.colorScheme.background)){
                     val startDestination = viewModel.startDestination
                     NavGraph(startDestination = startDestination)
                 }

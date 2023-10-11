@@ -21,14 +21,14 @@ fun SearchScreen(
     navigateToDetails: (Article) -> Unit
 ) {
     Column(
-        modifier  = Modifier
+        modifier  = Modifier.fillMaxSize()
             .padding(
                 top = MediumPadding1,
                 start = MediumPadding1,
                 end = MediumPadding1
             )
             .statusBarsPadding()
-            .fillMaxSize()
+
     ) {
         SearchBar(
             text = state.searchQuery,
